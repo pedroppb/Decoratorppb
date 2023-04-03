@@ -1,20 +1,21 @@
 package decoratorppb;
 
-public abstract class VendasDecorator implements Peca{
-    private Peca peca;
+public abstract class VendaDecorator extends Produto implements Servico {
+    private Servico servico;
     private String lista;
 
-    public VendasDecorator(Peca peca) {
-        this.peca = peca;
+    public VendaDecorator(Servico servico, String nome, float preco) {
+        super(nome,preco);
+        this.servico = servico;
     }
     public abstract float getValorPeca();
     @Override
     public float getPreco() {
-        return this.peca.getPreco()+this.getValorPeca();
+        return this.servico.getPreco()+this.getValorPeca();
     }
     public abstract String getNomePeca();
     @Override
-    public String getnome() {
-    return "peca: "+this.peca.getnome()+" R$ "+this.peca.getPreco();
+    public String getNome() {
+    return servico.getNome()+"peca: "+this.getNomeProduto()+" R$ "+this.getPrecoProduto()+"\n";
     }
 }

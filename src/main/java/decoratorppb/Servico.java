@@ -1,6 +1,6 @@
 package decoratorppb;
 
-public interface Peca {
+public interface Servico {
     float getPreco();
     String getNome();
 }
