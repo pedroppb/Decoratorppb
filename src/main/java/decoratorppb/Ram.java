@@ -1,8 +1,8 @@
 package decoratorppb;
 
-public class Placamae extends VendaDecorator {
-    public Placamae(Servico servico, String nome, float preco){
-        super(servico,nome,preco);
+public class Ram extends VendaDecorator {
+    public Ram(Servico servico, String nome, float preco) {
+        super(servico, nome, preco);
     }
 
     @Override
