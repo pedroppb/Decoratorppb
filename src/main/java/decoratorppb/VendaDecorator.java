@@ -16,6 +16,6 @@ public abstract class VendaDecorator extends Produto implements Servico {
     public abstract String getNomePeca();
     @Override
     public String getNome() {
-    return servico.getNome()+"peca: "+this.getNomeProduto()+" R$ "+this.getPrecoProduto()+"\n";
+        return servico.getNome()+"peca: "+this.getNomeProduto()+" R$ "+this.getPrecoProduto()+"\n";
     }
 }
